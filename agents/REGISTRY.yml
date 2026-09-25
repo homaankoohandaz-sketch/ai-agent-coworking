@@ -1,0 +1,61 @@
+version: 1
+
+workers:
+  - id: head
+    role: coordinator
+    capabilities: [planning, routing, delegation, review]
+
+  - id: claude-code
+    provider: anthropic
+    role: coding-specialist
+    capabilities: [coding, architecture, refactoring, qa]
+    access_profile: coding
+
+  - id: codex
+    provider: openai
+    role: coding-specialist
+    capabilities: [coding, architecture, testing, repository]
+    access_profile: coding
+
+  - id: gemini-cli
+    provider: google
+    role: multimodal-specialist
+    capabilities: [research, coding, multimodal]
+    access_profile: research-coding
+
+  - id: grok
+    provider: xai
+    role: research-specialist
+    capabilities: [research, analysis]
+    access_profile: research
+
+  - id: browser
+    provider: browser-use
+    role: browser-specialist
+    capabilities: [browser, web-automation, verification]
+    access_profile: browser
+
+  - id: uiux
+    role: design-specialist
+    capabilities: [ui, ux, design-system, frontend]
+    access_profile: design
+
+  - id: 3d
+    role: 3d-specialist
+    capabilities: [three_d, webgl, architectural_visualization]
+    access_profile: 3d
+
+  - id: content
+    role: content-specialist
+    capabilities: [content, social, copy, video-script]
+    access_profile: content
+
+  - id: qa
+    role: verification-specialist
+    capabilities: [testing, security, visual-qa, regression]
+    access_profile: qa
+
+  - id: deploy
+    role: deployment-specialist
+    capabilities: [cloudflare, netlify, github, publishing]
+    access_profile: deployment
