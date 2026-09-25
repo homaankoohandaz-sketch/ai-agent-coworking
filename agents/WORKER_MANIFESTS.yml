@@ -1,0 +1,42 @@
+version: 1
+
+workers:
+  claude-code:
+    adapter: cli
+    command: claude
+    capabilities: [coding, refactoring, testing]
+    context_mode: scoped
+  codex:
+    adapter: cli
+    command: codex
+    capabilities: [coding, repository, testing]
+    context_mode: scoped
+  gemini-cli:
+    adapter: cli
+    command: gemini
+    capabilities: [research, coding, multimodal]
+    context_mode: scoped
+  browser:
+    adapter: mcp
+    capabilities: [browser, web-automation, verification]
+    context_mode: scoped
+  uiux:
+    adapter: skill
+    capabilities: [ui, ux, frontend]
+    context_mode: scoped
+  3d:
+    adapter: tool
+    capabilities: [three_d, webgl, architectural_visualization]
+    context_mode: scoped
+  content:
+    adapter: tool
+    capabilities: [content, social, copy, video-script]
+    context_mode: scoped
+  qa:
+    adapter: local
+    capabilities: [testing, security, visual-qa, regression]
+    context_mode: scoped
+  deploy:
+    adapter: connector
+    capabilities: [github, cloudflare, netlify, publishing]
+    context_mode: scoped
