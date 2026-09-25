@@ -1,0 +1,96 @@
+version: 1
+
+# References are cataloged first. Code is not copied blindly.
+# License, maintenance, security and integration are reviewed before adoption.
+
+components:
+  - id: ccg-workflow
+    repo: fengshao1227/ccg-workflow
+    decision: study-and-adapt
+    capabilities: [orchestration, multi-model, hooks, quality-gates, skills]
+
+  - id: anthropic-skills
+    repo: anthropics/skills
+    decision: adopt-compatible-skills
+    capabilities: [skills, documents, technical]
+
+  - id: ui-ux-pro-max
+    repo: nextlevelbuilder/ui-ux-pro-max-skill
+    license: MIT
+    decision: integrate-as-skill
+    capabilities: [ui, ux, design-system, frontend]
+
+  - id: graphiti
+    repo: getzep/graphiti
+    decision: adapter-candidate
+    capabilities: [temporal-memory, provenance, graph-retrieval]
+
+  - id: omniroute
+    repo: diegosouzapw/OmniRoute
+    decision: gateway-candidate
+    capabilities: [provider-routing, fallback, quota-telemetry]
+
+  - id: browser-use
+    repo: browser-use/browser-use
+    decision: adapter-candidate
+    capabilities: [browser-automation, web]
+
+  - id: playwright-mcp
+    repo: microsoft/playwright-mcp
+    decision: adapter-candidate
+    capabilities: [browser, testing, web]
+
+  - id: openhands
+    repo: OpenHands/OpenHands
+    decision: adapter-candidate
+    capabilities: [coding, repository, execution]
+
+  - id: openhands-sdk
+    repo: OpenHands/software-agent-sdk
+    decision: adapter-candidate
+    capabilities: [agent-runtime, coding]
+
+  - id: cline
+    repo: cline/cline
+    decision: adapter-candidate
+    capabilities: [coding, tools, MCP]
+
+  - id: gemini-cli
+    repo: google-gemini/gemini-cli
+    decision: adapter-candidate
+    capabilities: [coding, research, multimodal]
+
+  - id: qwen-code
+    repo: QwenLM/qwen-code
+    decision: adapter-candidate
+    capabilities: [coding]
+
+  - id: mcp-servers
+    repo: modelcontextprotocol/servers
+    decision: catalog-and-select
+    capabilities: [MCP, tools, integrations]
+
+  - id: vivy-agent-orchestration
+    repo: vivy-yi/awesome-agent-orchestration
+    decision: discovery-index
+    capabilities: [orchestration-discovery]
+
+  - id: vinhnx-vtcode
+    repo: vinhnx/VTCode
+    decision: research-source
+    capabilities: [coding]
+
+  - id: quantgeek-docker-mcp
+    repo: QuantGeekDev/docker-mcp
+    decision: research-source
+    capabilities: [MCP, containers]
+
+  - id: codeofaxel-kiln
+    repo: codeofaxel/Kiln
+    decision: research-source
+    capabilities: [agent-tools]
+
+  - id: devvgwardo-openclawworld
+    repo: DevvGwardo/openclawworld
+    decision: research-source
+    capabilities: [agents]
