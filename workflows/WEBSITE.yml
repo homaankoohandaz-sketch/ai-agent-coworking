@@ -1,0 +1,6 @@
+name: build-website
+pipeline: [research, information_architecture, ux_ui, copy, visual_assets, frontend, animation, qa, performance, deployment]
+input: [brief, brand_assets, target_users, constraints]
+output: [source_repository, preview, production_url, test_report]
+approval:
+  production_publish: required
