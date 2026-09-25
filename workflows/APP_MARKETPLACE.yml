@@ -1,0 +1,6 @@
+name: build-app-marketplace
+pipeline: [product_strategy, architecture, ux_ui, identity, developer_accounts, app_submission, catalog, search, payments, moderation, reviews, admin, api, security, qa, deployment]
+input: [marketplace_goal, target_platforms, business_model, constraints]
+output: [marketplace_source, admin, api, deployment, operating_runbook]
+approval:
+  production_publish: required

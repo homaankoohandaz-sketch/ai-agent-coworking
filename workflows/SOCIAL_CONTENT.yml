@@ -1,0 +1,6 @@
+name: social-content-production
+pipeline: [research, content_strategy, copy, visual, video, qa, draft, approval, publish, analytics]
+input: [topic, audience, platform, content_goal, brand_rules]
+output: [content_pack, captions, media, publishing_plan, analytics_plan]
+approval:
+  publish: required
