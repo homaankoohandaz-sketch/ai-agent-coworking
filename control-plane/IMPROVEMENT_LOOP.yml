@@ -1,0 +1,42 @@
+version: 1
+
+loop:
+  architecture:
+    owner: head
+  execution:
+    owner: workers
+  review:
+    owner: head
+  verification:
+    owner: qa
+  learning:
+    owner: head
+
+stopping:
+  require_acceptance_criteria: true
+  require_evidence: true
+  max_iterations: 5
+  minimum_expected_improvement: 0.02
+
+selection:
+  objective:
+    - task_fit
+    - verified_quality
+    - reliability
+    - latency
+    - cost
+  never_optimize_for:
+    - raw_model_score
+    - token_volume
+
+learning_record:
+  required:
+    - task_signature
+    - worker_selection
+    - outcome
+    - defects
+    - fixes
+    - verification
+    - cost
+    - latency
+    - reusable_lesson
