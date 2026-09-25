@@ -1,0 +1,34 @@
+# BuildWise AI — Project Adapter
+
+project_id: buildwise-ai
+project_repo: https://github.com/homaankoohandaz-sketch/homaan_crm
+project_branch: buildwise-implementation
+control_hub_repo: https://github.com/homaankoohandaz-sketch/ai-agent-coworking
+independence: true
+
+## Boundaries
+- BuildWise code truth = its Git repository.
+- BuildWise coordination truth = .agent-control/.
+- Control Hub truth = this repository.
+- No automatic code/secrets transfer between projects.
+- Verified reusable skills may be promoted between projects explicitly.
+
+## Current state
+- BuildWise has substantial REOS/CRM/intelligence/construction primitives; it is not a blank project.
+- Master checklist v2 contains 675 acceptance requirements.
+- Supabase project beuestoewletjsgmigmf is ACTIVE_HEALTHY with 10 Edge Functions.
+- Netlify site buildwise-ai-h exists.
+- Autonomous Codex runtime is not verified in the current ChatGPT session.
+- Grok bridge is documented in BuildWise history; runtime authorship still requires per-task evidence.
+
+## Team
+head: chatgpt
+executor: grok
+reviewer: claude
+fallback_workers: [codex, gemini, browser, uiux, 3d, qa, deploy, content, research]
+
+## Operating loop
+REQUEST → PLAN → DISPATCH → EXECUTE → REVIEW → TEST → FIX → RETEST → VERIFY → RECORD → DELIVER
+
+## Cross-project learning
+If BuildWise produces a verified reusable worker pattern, token optimization, routing rule, or QA method, record it in Control Hub memory. Do not copy project-specific architecture or secrets.
