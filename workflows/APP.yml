@@ -1,0 +1,6 @@
+name: build-app
+pipeline: [product_definition, architecture, ux_ui, backend, frontend, auth, data, integrations, tests, security, build, distribution]
+input: [product_brief, target_users, platforms, constraints]
+output: [source, builds, test_report, distribution_package]
+approval:
+  production_publish: required
