@@ -1,0 +1,51 @@
+version: 1
+
+platforms:
+  claude:
+    type: model-agent
+    roles: [coding, reasoning, orchestration]
+    adapter: planned
+  codex:
+    type: model-agent
+    roles: [coding, repository, testing]
+    adapter: planned
+  gemini:
+    type: model-agent
+    roles: [research, coding, multimodal]
+    adapter: planned
+  grok:
+    type: model-agent
+    roles: [research, analysis]
+    adapter: planned
+  qwen-code:
+    type: coding-agent
+    roles: [coding]
+    adapter: planned
+  openhands:
+    type: autonomous-agent
+    roles: [coding, execution]
+    adapter: planned
+  cline:
+    type: coding-agent
+    roles: [coding, tools, MCP]
+    adapter: planned
+  browser-use:
+    type: browser-agent
+    roles: [browser, web]
+    adapter: planned
+  playwright-mcp:
+    type: tool-server
+    roles: [browser, testing]
+    adapter: planned
+  n8n:
+    type: workflow-engine
+    roles: [automation]
+    adapter: optional
+  omniroute:
+    type: model-gateway
+    roles: [routing, fallback, quota]
+    adapter: optional
+  graphiti:
+    type: memory-engine
+    roles: [semantic-memory, temporal-context]
+    adapter: optional
