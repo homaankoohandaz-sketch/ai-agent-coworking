@@ -1,0 +1,44 @@
+version: 1
+
+profiles:
+  head:
+    allow: [task-read, task-write, registry-read, artifact-read, dispatch]
+    deny: [raw-secret-read]
+
+  coding:
+    allow: [repo-read, repo-write-branch, tests, artifact-write]
+    deny: [production-secret-read, billing, social-publish]
+
+  research:
+    allow: [web-read, source-read, artifact-write]
+    deny: [repo-write, production-publish, secrets]
+
+  research-coding:
+    allow: [web-read, repo-read, artifact-write]
+    deny: [production-publish, billing]
+
+  browser:
+    allow: [browser-session, web-read, artifact-write]
+    deny: [credential-export, financial-action, irreversible-publish]
+
+  design:
+    allow: [design-read, design-write, artifact-write]
+    deny: [production-publish, secrets]
+
+  3d:
+    allow: [asset-read, asset-write, artifact-write]
+    deny: [production-publish, secrets]
+
+  content:
+    allow: [research-read, asset-write, draft-write]
+    deny: [social-publish, credential-read]
+
+  qa:
+    allow: [artifact-read, test, report-write]
+    deny: [production-write, secrets]
+
+  deployment:
+    allow: [deployment-read, deployment-write]
+    deny: [credential-export, billing]
+
+# These are scopes. Secret values live outside Git.
